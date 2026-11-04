@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🔮 Giải Mã Vận Mệnh, Thần Số Học Pitago, Bói Tình Duyên & Phong Thủy SĐT</title>
+  <meta name="description" content="Tra cứu Thần Số Học Pitago miễn phí theo Họ Tên & Ngày Sinh, Bói Độ Hợp Nhau Tình Duyên, Chấm Điểm Phong Thủy Sim/Số Tài Khoản Ngân Hàng & Tạo Hồ Sơ Xin Việc CV Đẹp Trong 30 Giây." />
+  <meta property="og:title" content="🔮 Giải Mã Vận Mệnh & Thần Số Học Trọn Đời — Nhập Ngày Sinh Xem Ngay!" />
+  <meta property="og:description" content="Khám phá Con Số Chủ Đạo, Biểu Đồ Ngày Sinh 3x3, 4 Đỉnh Cao Đời Người, Độ Hợp Tình Duyên & Phong Thủy Tài Lộc hoàn toàn miễn phí." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cocvn157.github.io/than-so-hoc-ai/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Starry Cosmic Background -->
+  <canvas id="star-canvas"></canvas>
+
+  <div class="app-shell">
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <div class="brand-wrap">
+        <div class="brand-logo">🔮</div>
+        <div>
+          <div class="brand-title">Giải Mã Vận Mệnh & Đời Sống</div>
+          <div class="brand-sub">Thần Số Học Pitago • Tình Duyên • Phong Thủy Tài Lộc • Hồ Sơ CV</div>
+        </div>
+      </div>
+
+      <div class="topbar-actions">
+        <span id="vipStatusBadge" class="btn-soft" style="cursor:default;">🌟 Bản Miễn Phí</span>
+        <button id="btnOpenUnlockModal" class="btn-gold" style="padding:9px 15px;font-size:13px;">
+          🔓 Mở Khóa Bản Đầy Đủ (29k)
+        </button>
+        <button id="btnOpenOwnerSetup" class="btn-soft" title="Cài đặt số tài khoản ngân hàng nhận tiền VietQR">
+          ⚙️ Cài Đặt TK Nhận Tiền
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="hero-banner">
+      <div class="hero-pill">✨ Hơn 128.000+ Lượt Tra Cứu Vận Mệnh & Tình Duyên Chính Xác</div>
+      <h1>Nhập Họ Tên & Ngày Sinh — Giải Mã Cuộc Đời Bạn Trong 3 Giây</h1>
+      <p>
+        Ứng dụng tra cứu <strong>Thần Số Học Pitago</strong>, <strong>Độ Hợp Tình Duyên Cặp Đôi</strong>,
+        <strong>Chấm Điểm Phong Thủy SĐT / Số Tài Khoản Ngân Hàng</strong> và <strong>Tạo CV Xin Việc A4</strong> hoàn toàn tự động, dễ hiểu cho mọi người Việt!
+      </p>
+    </section>
+
+    <!-- 4 MAIN TABS -->
+    <nav class="main-tabs">
+      <button class="main-tab-btn active" data-tab="tab-numerology">
+        <span class="tab-icon">🔮</span>
+        <div>
+          <strong>1. Tra Cứu Thần Số Học</strong>
+          <small>Giải mã ngày sinh & vận mệnh</small>
+        </div>
+      </button>
+
+      <button class="main-tab-btn" data-tab="tab-love">
+        <span class="tab-icon">💘</span>
+        <div>
+          <strong>2. Bói Hợp Tình Duyên</strong>
+          <small>Đo độ hợp đôi & tải giấy chứng nhận</small>
+        </div>
+      </button>
+
+      <button class="main-tab-btn" data-tab="tab-fengshui">
+        <span class="tab-icon">☯️</span>
+        <div>
+          <strong>3. Phong Thủy SĐT & STK</strong>
+          <small>Chấm điểm số đẹp & giờ hoàng đạo</small>
+        </div>
+      </button>
+
+      <button class="main-tab-btn" data-tab="tab-cv">
+        <span class="tab-icon">📄</span>
+        <div>
+          <strong>4. Tạo Hồ Sơ Xin Việc (CV)</strong>
+          <small>Tạo CV chuẩn A4 trong 30 giây</small>
+        </div>
+      </button>
+    </nav>
+
+    <!-- ======================================================================
+         TAB 1: TRA CỨU THẦN SỐ HỌC PITAGO & LUẬN GIẢI TRỌN ĐỜI
+         ====================================================================== -->
+    <section id="tab-numerology" class="tab-section active">
+      <div class="glass-card no-print">
+        <div class="card-title">
+          <span>🔮 Nhập Thông Tin Của Bạn Để Luận Giải Thần Số Học</span>
+          <button id="btnDemoNumerology" class="btn-soft">✨ Xem Thử Mẫu Ngay</button>
+        </div>
+
+        <div class="form-grid-3">
+          <div>
+            <label class="field-label">Họ và Tên Khai Sinh (Có dấu hoặc không dấu)</label>
+            <input id="numFullName" class="field-input" type="text" value="Nguyễn Minh Anh" placeholder="Ví dụ: Nguyễn Minh Anh" />
+          </div>
+          <div>
+            <label class="field-label">Ngày Tháng Năm Sinh Dương Lịch</label>
+            <input id="numBirthDate" class="field-input" type="date" value="1996-08-18" />
+          </div>
+          <div>
+            <label class="field-label">Giới Tính</label>
+            <select id="numGender" class="field-select">
+              <option value="Nữ">Nữ</option>
+              <option value="Nam">Nam</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <button id="btnCalcNumerology" class="btn-gold">
+            🔮 Giải Mã Vận Mệnh & Ngày Sinh Của Tôi Ngay
+          </button>
+          <button id="btnPrintNumerologyPdf" class="btn-soft">
+            🖨️ In / Lưu Bản Luận Giải Ra File PDF
+          </button>
+        </div>
+      </div>
+
+      <!-- KẾT QUẢ THẦN SỐ HỌC -->
+      <div id="numerologyResultArea">
+        <!-- Populated dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         TAB 2: BÓI ĐỘ HỢP NHAU TÌNH DUYÊN & CẶP ĐÔI (LOVE COMPATIBILITY)
+         ====================================================================== -->
+    <section id="tab-love" class="tab-section">
+      <div class="glass-card">
+        <div class="card-title">
+          <span>💘 Kiểm Tra Độ Hợp Nhau Tình Duyên & Hôn Nhân Giữa 2 Người</span>
+          <button id="btnDemoLove" class="btn-soft">💑 Xem Thử Cặp Đôi Mẫu</button>
+        </div>
+
+        <div class="form-grid-2">
+          <!-- Người thứ 1 -->
+          <div style="background:rgba(236,72,153,0.1);border:1px solid rgba(236,72,153,0.35);padding:16px;border-radius:16px;">
+            <h4 style="color:#f472b6;margin-bottom:10px;">🙋‍♂️ Thông Tin Của Bạn (Người Thứ 1)</h4>
+            <label class="field-label">Họ và Tên của Bạn</label>
+            <input id="loveNameA" class="field-input" type="text" value="Trần Hoàng Quân" style="margin-bottom:10px;" />
+            <label class="field-label">Ngày Tháng Năm Sinh</label>
+            <input id="loveDobA" class="field-input" type="date" value="1995-05-16" />
+          </div>
+
+          <!-- Người thứ 2 -->
+          <div style="background:rgba(168,85,247,0.1);border:1px solid rgba(168,85,247,0.35);padding:16px;border-radius:16px;">
+            <h4 style="color:#c084fc;margin-bottom:10px;">🙋‍♀️ Thông Tin Người Ấy (Người Thứ 2)</h4>
+            <label class="field-label">Họ và Tên Người Ấy</label>
+            <input id="loveNameB" class="field-input" type="text" value="Nguyễn Bảo Ngọc" style="margin-bottom:10px;" />
+            <label class="field-label">Ngày Tháng Năm Sinh</label>
+            <input id="loveDobB" class="field-input" type="date" value="1997-10-24" />
+          </div>
+        </div>
+
+        <button id="btnCalcLove" class="btn-gold">
+          💘 Xem Kết Quả Hợp Đôi & Tạo Giấy Chứng Nhận Tình Yêu
+        </button>
+      </div>
+
+      <!-- KẾT QUẢ BÓI TÌNH DUYÊN -->
+      <div id="loveResultArea"></div>
+
+      <!-- CANVAS GIẤY CHỨNG NHẬN HỢP ĐÔI -->
+      <div class="glass-card" style="text-align:center;">
+        <div class="card-title" style="justify-content:center;">
+          <span>🖼️ Thẻ "Chứng Nhận Hợp Đôi" (Tải Về Đăng Zalo / Facebook / TikTok)</span>
+        </div>
+        <div style="overflow-x:auto;margin-bottom:14px;">
+          <canvas id="loveCertCanvas" width="800" height="460" style="max-width:100%;border-radius:16px;border:2px solid #fbbf24;"></canvas>
+        </div>
+        <button id="btnDownloadLoveCert" class="btn-gold">
+          📥 Tải Ảnh Chứng Nhận Hợp Đôi (.PNG Sắc Nét)
+        </button>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         TAB 3: PHONG THỦY SĐT, SỐ TÀI KHOẢN NGÂN HÀNG & XEM NGÀY TỐT
+         ====================================================================== -->
+    <section id="tab-fengshui" class="tab-section">
+      <div class="glass-card">
+        <div class="card-title">
+          <span>☯️ Chấm Điểm Phong Thủy Số Điện Thoại / Số Tài Khoản Ngân Hàng & Xem Ngày Tốt</span>
+          <button id="btnDemoFengShui" class="btn-soft">✨ Thử Số Lộc Phát 6868</button>
+        </div>
+
+        <div class="form-grid-3">
+          <div>
+            <label class="field-label">Số Điện Thoại Hoặc Số Tài Khoản Ngân Hàng</label>
+            <input id="fsNumberInput" class="field-input" type="text" value="0988686868" placeholder="Nhập SĐT hoặc Số tài khoản..." />
+          </div>
+          <div>
+            <label class="field-label">Năm Sinh Dương Lịch Của Bạn</label>
+            <input id="fsBirthYear" class="field-input" type="number" value="1996" min="1940" max="2026" />
+          </div>
+          <div>
+            <label class="field-label">Chọn Ngày Muốn Xem Giờ Hoàng Đạo</label>
+            <input id="fsCheckDate" class="field-input" type="date" />
+          </div>
+        </div>
+
+        <button id="btnCalcFengShui" class="btn-gold">
+          ☯️ Chấm Điểm Phong Thủy Tài Lộc & Xem Giờ Hoàng Đạo Ngay
+        </button>
+      </div>
+
+      <div id="fengShuiResultArea"></div>
+    </section>
+
+    <!-- ======================================================================
+         TAB 4: TẠO HỒ SƠ XIN VIỆC (CV) ĐẸP TRONG 30 GIÂY
+         ====================================================================== -->
+    <section id="tab-cv" class="tab-section">
+      <div class="glass-card no-print">
+        <div class="card-title">
+          <span>📄 Tạo Hồ Sơ Xin Việc (CV) Chuẩn Đẹp Trong 30 Giây</span>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <button class="btn-soft btn-cv-preset" data-preset="sales">💼 Mẫu Kinh Doanh / Bán Hàng</button>
+            <button class="btn-soft btn-cv-preset" data-preset="accounting">📊 Mẫu Kế Toán / Văn Phòng</button>
+            <button class="btn-soft btn-cv-preset" data-preset="student">🎓 Mẫu Sinh Viên Mới Ra Trường</button>
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div>
+            <label class="field-label">Họ và Tên Ứng Viên</label>
+            <input id="cvFullName" class="field-input" type="text" value="Nguyễn Minh Anh" style="margin-bottom:10px;" />
+
+            <label class="field-label">Vị Trí Ứng Tuyển</label>
+            <input id="cvRole" class="field-input" type="text" value="Chuyên Viên Kinh Doanh & Tư Vấn Khách Hàng" style="margin-bottom:10px;" />
+
+            <div class="form-grid-2" style="margin-bottom:10px;">
+              <div>
+                <label class="field-label">Số Điện Thoại</label>
+                <input id="cvPhone" class="field-input" type="text" value="0988 686 868" />
+              </div>
+              <div>
+                <label class="field-label">Email Liên Hệ</label>
+                <input id="cvEmail" class="field-input" type="text" value="minhanh.work@gmail.com" />
+              </div>
+            </div>
+
+            <label class="field-label">Địa Chỉ Hiện Tại</label>
+            <input id="cvAddress" class="field-input" type="text" value="Quận Cầu Giấy, Hà Nội" style="margin-bottom:10px;" />
+
+            <label class="field-label">Mục Tiêu Nghề Nghiệp & Điểm Mạnh Bản Thân</label>
+            <textarea id="cvSummary" class="field-textarea" rows="3" style="margin-bottom:10px;"></textarea>
+            <button id="btnInjectNumerologyStrength" class="btn-soft" style="margin-bottom:10px;">
+              🔮 Tự Động Chèn Điểm Mạnh Theo Ngày Sinh Thần Số Học
+            </button>
+          </div>
+
+          <div>
+            <label class="field-label">Kinh Nghiệm Làm Việc Thực Tế</label>
+            <textarea id="cvExperience" class="field-textarea" rows="5" style="margin-bottom:10px;"></textarea>
+
+            <label class="field-label">Trình Độ Học Vấn / Bằng Cấp</label>
+            <input id="cvEducation" class="field-input" type="text" style="margin-bottom:10px;" />
+
+            <label class="field-label">Kỹ Năng Chuyên Môn & Tin Học</label>
+            <textarea id="cvSkills" class="field-textarea" rows="3" style="margin-bottom:12px;"></textarea>
+
+            <button id="btnPrintCvA4" class="btn-gold" style="width:100%;">
+              🖨️ Tải Về Máy / In Hồ Sơ CV Chuẩn A4 (.PDF)
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- BẢN XEM TRƯỚC HỒ SƠ CV A4 -->
+      <div id="cvPaperPreview" class="cv-paper"></div>
+    </section>
+  </div>
+
+  <!-- ========================================================================
+       MODAL 1: MỞ KHÓA BẢN ĐẦY ĐỦ 29.000Đ (BẰNG 1 LY TRÀ SỮA QUA VIETQR)
+       ======================================================================== -->
+  <div id="unlockModal" class="modal-backdrop">
+    <div class="modal-card">
+      <button class="modal-close" id="btnCloseUnlockModal">&times;</button>
+      <h3 style="color:#fde68a;font-size:19px;margin-bottom:6px;text-align:center;">
+        🔓 Mở Khóa Sách Luận Giải Trọn Đời & Vận Hạn 12 Tháng
+      </h3>
+      <p style="font-size:13px;color:#cbd5e1;text-align:center;margin-bottom:14px;">
+        Chỉ <strong style="color:#fbbf24;font-size:16px;" id="modalPriceText">29.000đ</strong> (bằng đúng 1 ly trà sữa) để mở khóa trọn bộ Dự Báo 12 Tháng Năm 2026–2027, Bí Quyết Kích Tài Lộc & Xuất Sách Thần Số Học PDF không giới hạn!
+      </p>
+
+      <div style="background:#fff;padding:12px;border-radius:16px;text-align:center;margin-bottom:14px;">
+        <img id="vietQrImg" src="" alt="Mã VietQR Thanh Toán Tự Động" style="max-width:230px;width:100%;border-radius:10px;" />
+        <div style="color:#0f172a;font-size:12.5px;margin-top:6px;">
+          Ngân hàng: <strong id="qrBankLabel">MB</strong> • STK: <strong id="qrAccLabel">0988888888</strong><br />
+          Chủ TK: <strong id="qrNameLabel">NGUYEN VAN A</strong>
+        </div>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.06);padding:12px;border-radius:12px;margin-bottom:12px;">
+        <label class="field-label">🔑 Nhập Mã Mở Khóa VIP (Hoặc nhập mã dùng thử: <code>VIP2026</code>)</label>
+        <div style="display:flex;gap:8px;">
+          <input id="vipCodeInput" class="field-input" type="text" placeholder="Nhập mã VIP2026..." />
+          <button id="btnActivateVipCode" class="btn-gold" style="white-space:nowrap;">Kích Hoạt</button>
+        </div>
+        <p id="vipCodeMsg" style="font-size:12.5px;margin-top:6px;"></p>
+      </div>
+
+      <div style="text-align:center;">
+        <button id="btnShareToUnlockFree" class="btn-soft" style="width:100%;justify-content:center;">
+          🎁 Hoặc Chia Sẻ Link Này Cho Bạn Bè Để Mở Khóa Miễn Phí Ngay!
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL 2: CÀI ĐẶT SỐ TÀI KHOẢN NHẬN TIỀN DÀNH CHO CHỦ WEB (5 GIÂY)
+       ======================================================================== -->
+  <div id="ownerSetupModal" class="modal-backdrop">
+    <div class="modal-card">
+      <button class="modal-close" id="btnCloseOwnerSetup">&times;</button>
+      <h3 style="color:#fde68a;font-size:18px;margin-bottom:6px;">
+        ⚙️ Cài Đặt Số Tài Khoản Ngân Hàng Nhận Tiền (VietQR)
+      </h3>
+      <p style="font-size:12.5px;color:#cbd5e1;margin-bottom:14px;">
+        Điền số tài khoản ngân hàng của bạn vào đây. Khi khách bấm mở khóa (29.000đ), mã QR sẽ tự động chuyển khoản thẳng về tài khoản của bạn 100%!
+      </p>
+
+      <label class="field-label">Tên Ngân Hàng (Mã VietQR: MB, VCB, TCB, ACB, ICB, BIDV, TPB...)</label>
+      <input id="cfgBankId" class="field-input" type="text" value="MB" style="margin-bottom:10px;" />
+
+      <label class="field-label">Số Tài Khoản Ngân Hàng Nhận Tiền</label>
+      <input id="cfgAccountNo" class="field-input" type="text" value="0988888888" style="margin-bottom:10px;" />
+
+      <label class="field-label">Tên Chủ Tài Khoản (Viết Hoa Không Dấu)</label>
+      <input id="cfgAccountName" class="field-input" type="text" value="NGUYEN VAN A" style="margin-bottom:10px;" />
+
+      <label class="field-label">Giá Mở Khóa Gói VIP (VNĐ — Gợi ý dễ bán nhất: 19000 hoặc 29000)</label>
+      <input id="cfgPrice" class="field-input" type="number" value="29000" style="margin-bottom:14px;" />
+
+      <button id="btnSaveOwnerConfig" class="btn-gold" style="width:100%;margin-bottom:10px;">
+        💾 Lưu Cài Đặt & Tạo Link Bán Hàng Của Tôi
+      </button>
+
+      <input id="ownerShareUrlBox" class="field-input" type="text" readonly placeholder="Link mang số tài khoản của bạn sẽ hiện ở đây..." />
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
